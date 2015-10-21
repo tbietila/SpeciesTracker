@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @database_name.name %>
+</p>
+
+<%= link_to 'Edit', edit_database_name_path(@database_name) %> |
+<%= link_to 'Back', database_names_path %>

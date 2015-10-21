@@ -1,0 +1,1593 @@
+
+
+Started GET "/" for ::1 at 2015-10-16 14:15:47 -0700
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.6ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.8ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (113.5ms)
+  [1m[36m (98.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateDatabaseNames (20151016211408)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (43.0ms)[0m  [1mCREATE TABLE "database_names" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151016211408"]]
+  [1m[36m (15.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSpecies (20151016212104)
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (2.7ms)[0m  [1mCREATE TABLE "species" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151016212104"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'database_names'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.6ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'species'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (111.6ms)[0m  [1mDROP DATABASE IF EXISTS "speciestracker_test"[0m
+  [1m[35m (571.5ms)[0m  CREATE DATABASE "speciestracker_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.7ms)[0m  CREATE TABLE "database_names" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "species" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (1.9ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (1.3ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20151016212104')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151016211408')
+
+
+Started GET "/" for ::1 at 2015-10-16 14:24:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.7ms)
+Completed 200 OK in 38ms (Views: 6.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-10-16 14:24:29 -0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.1ms)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 14:24:32 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (10.9ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 1677ms (Views: 1662.8ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/assets/database_names.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 14:24:34 -0700
+
+
+Started GET "/assets/scaffolds.self-994b83d8af8c729f12c568e2e64cb31cb592314f5ad381758530574de0ab73ff.css?body=1" for ::1 at 2015-10-16 14:24:34 -0700
+
+
+Started GET "/assets/species.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 14:24:34 -0700
+
+
+Started GET "/assets/database_names.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 14:24:34 -0700
+
+
+Started GET "/assets/species.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 14:24:34 -0700
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 14:24:37 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (349.0ms)
+  Rendered species/new.html.erb within layouts/application (593.4ms)
+Completed 200 OK in 812ms (Views: 804.0ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 14:24:40 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2y3frTtNx6agSJUpLsgQ88hpcyy21+DEthpN5NDJ3w02+W3EMWyn22EVWbgqEeC//BWa4G3LgExU505dVjaaUw==", "species"=>{"name"=>"Tiger"}, "commit"=>"Create Species"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Tiger"], ["created_at", "2015-10-16 21:24:40.977778"], ["updated_at", "2015-10-16 21:24:40.977778"]]
+  [1m[36m (15.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/species/1
+Completed 302 Found in 36ms (ActiveRecord: 20.0ms)
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 14:24:41 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 84ms (Views: 42.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 14:24:43 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.3ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 42ms (Views: 41.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 14:24:44 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (1.7ms)
+  Rendered species/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 49ms (Views: 48.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 14:24:49 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qkCLG1NgoUmOaHs9tKyya0ZM/20meQe1gMyqb6jcZSVHlDlyWUHBNE81t6ywdUIncjAWof1lZz1iManWLiMgew==", "species"=>{"name"=>"Lion"}, "commit"=>"Create Species"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Lion"], ["created_at", "2015-10-16 21:24:49.185465"], ["updated_at", "2015-10-16 21:24:49.185465"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/species/2
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/species/2" for ::1 at 2015-10-16 14:24:49 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered species/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 56ms (Views: 54.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 14:24:50 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 36ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 14:24:51 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (1.3ms)
+  Rendered species/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 44ms (Views: 43.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 14:25:06 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+Yk6kM51t/jONH1tkHa9moPzGIHJBV96hoMvqZLPkJgUXYj5xFTXhQ9psfyUr03Wt4/xTRIZP/JkfiwQFDDVxg==", "species"=>{"name"=>"Snow Leopard"}, "commit"=>"Create Species"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Snow Leopard"], ["created_at", "2015-10-16 21:25:06.801338"], ["updated_at", "2015-10-16 21:25:06.801338"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/species/3
+Completed 302 Found in 6ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/species/3" for ::1 at 2015-10-16 14:25:06 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered species/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 49ms (Views: 48.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 14:25:08 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.3ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 33.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 14:25:09 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (0.9ms)
+  Rendered species/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 31ms (Views: 30.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 14:25:16 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rIsr3bQVzEXm0NC41QmXaiVQ9x0MXJBuRSJi+B25qaJBX5m0vjSsOCeNHCnR0GcmESwe0ddA8Oan32FBm0bs/A==", "species"=>{"name"=>"Bear"}, "commit"=>"Create Species"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Bear"], ["created_at", "2015-10-16 21:25:16.566532"], ["updated_at", "2015-10-16 21:25:16.566532"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/species/4
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/species/4" for ::1 at 2015-10-16 14:25:16 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered species/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 14:25:19 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 27ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 14:25:21 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (0.8ms)
+  Rendered species/new.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 36ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 14:25:27 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SMqvKc0ZMnvg7jaHKka0ux7DA4JCmu9TQLGozbI92hylHh1AxzhSBiGz+hYun0T3Kr/qTpmGj9uiTKt0NMKfQg==", "species"=>{"name"=>"Honey Badger"}, "commit"=>"Create Species"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Honey Badger"], ["created_at", "2015-10-16 21:25:27.231547"], ["updated_at", "2015-10-16 21:25:27.231547"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/species/5
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/species/5" for ::1 at 2015-10-16 14:25:27 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 5]]
+  Rendered species/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 14:25:29 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 30ms (Views: 29.0ms | ActiveRecord: 0.2ms)
+  [1m[36m (18.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSpecies (20151016212104)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (18.7ms)[0m  [1mCREATE TABLE "species" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151016212104"]]
+  [1m[36m (15.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSighting (20151016214708)
+  [1m[35m (15.4ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mCREATE TABLE "sightings" ("id" serial primary key, "date" date) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151016214708"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sightings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'species'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+  [1m[36m (19.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSpecies (20151016212104)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (33.8ms)[0m  [1mCREATE TABLE "species" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151016212104"]]
+  [1m[36m (15.7ms)[0m  [1mCOMMIT[0m
+Migrating to CreateSighting (20151016214708)
+  [1m[35m (0.2ms)[0m  BEGIN
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/learn01/speciestracker/db/migrate/20151016214708_create_sighting.rb:8)
+  [1m[36m (2.5ms)[0m  [1mCREATE TABLE "sightings" ("id" serial primary key, "date" date, "lat" character varying, "long" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151016214708"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sightings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'species'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:07:04 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.4ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 291ms (Views: 273.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/scaffolds.self-994b83d8af8c729f12c568e2e64cb31cb592314f5ad381758530574de0ab73ff.css?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/assets/database_names.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/assets/species.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/assets/database_names.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/assets/species.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-16 15:07:04 -0700
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:07:06 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (96.6ms)
+  Rendered species/new.html.erb within layouts/application (114.9ms)
+Completed 200 OK in 164ms (Views: 159.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 15:07:10 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"a7Kw/5q42WPMc7iLxeyBA7u58jlaiUKEe5S39DVJW7SGZgKWkJm5Hg0udBrBNXFPj8Ub9YGVIgyZabRNs7Ye6g==", "species"=>{"name"=>"Lion"}, "commit"=>"Create Species"}
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Lion"], ["created_at", "2015-10-16 22:07:10.747678"], ["updated_at", "2015-10-16 22:07:10.747678"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/species/1
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:07:10 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpecies Load (2.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 85ms (Views: 65.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:07:12 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 44ms (Views: 42.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:07:14 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (1.7ms)
+  Rendered species/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 15:07:19 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"x9AEWlxnuy0k29ijMAia8olfP0A5x9jzKULbOcPOZ5wqBLYzVkbbUOWGFDI00Wq+vSPWjOLbuHvLv9iARTEiwg==", "species"=>{"name"=>"Honey Badger"}, "commit"=>"Create Species"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Honey Badger"], ["created_at", "2015-10-16 22:07:19.179581"], ["updated_at", "2015-10-16 22:07:19.179581"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/species/2
+Completed 302 Found in 4ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/species/2" for ::1 at 2015-10-16 15:07:19 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  Rendered species/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:07:21 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:07:22 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (0.9ms)
+  Rendered species/new.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 28ms (Views: 27.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 15:07:26 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"TYZXSVovMNf3VmufnWk/h+/jBxJydPRhWXkBoj1TUuqgUuUgUA5QqjYLpw6ZsM/L25/u3qlolOm7hAIbu6wXtA==", "species"=>{"name"=>"Bear"}, "commit"=>"Create Species"}
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["name", "Bear"], ["created_at", "2015-10-16 22:07:26.549700"], ["updated_at", "2015-10-16 22:07:26.549700"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/species/3
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/species/3" for ::1 at 2015-10-16 15:07:26 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 3]]
+  Rendered species/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 31.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:07:27 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 32ms (Views: 31.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/1/edit" for ::1 at 2015-10-16 15:08:14 -0700
+Processing by SpeciesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered species/_form.html.erb (1.1ms)
+  Rendered species/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 73ms (Views: 72.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:08:21 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 34.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/sightings" for ::1 at 2015-10-16 15:10:17 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"sightings"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Species with 'id'=sightings):
+  app/controllers/species_controller.rb:67:in `set_species'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.6ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.8ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.2ms)
+
+
+Started GET "/sightings" for ::1 at 2015-10-16 15:10:42 -0700
+
+ActionController::RoutingError (No route matches [GET] "/sightings"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (12.1ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (70.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.7ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (80.5ms)
+
+
+Started GET "/species/1/edit" for ::1 at 2015-10-16 15:12:32 -0700
+Processing by SpeciesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.1ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered species/_form.html.erb (1.6ms)
+  Rendered species/edit.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 79ms (Views: 67.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/species/1/edit" for ::1 at 2015-10-16 15:12:33 -0700
+Processing by SpeciesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered species/_form.html.erb (1.4ms)
+  Rendered species/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 33ms (Views: 31.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/database_names.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/assets/scaffolds.self-994b83d8af8c729f12c568e2e64cb31cb592314f5ad381758530574de0ab73ff.css?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/assets/species.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/assets/database_names.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/assets/species.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-16 15:12:34 -0700
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:12:37 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.1ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 72ms (Views: 70.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:12:38 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 33ms (Views: 32.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:12:42 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.1ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 29ms (Views: 27.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:12:47 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (1.0ms)
+  Rendered species/new.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 68ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 15:12:51 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J6ELCMd2WMQFre0deAhVRi25bnR1ft57UXo1IJyBL+HKdblhzVc4ucTwIYx80aUKGcWHuK5ivvOzhzaZGn5qvw==", "species"=>{"name"=>"liger"}, "commit"=>"Create Species"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "liger"], ["created_at", "2015-10-16 22:12:51.879423"], ["updated_at", "2015-10-16 22:12:51.879423"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/species/4
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/species/4" for ::1 at 2015-10-16 15:12:51 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mSpecies Load (1.0ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  Rendered species/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 35ms (Views: 30.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:12:54 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sightings" for ::1 at 2015-10-16 15:13:06 -0700
+
+ActionController::RoutingError (No route matches [GET] "/sightings"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.1ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (57.7ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.5ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.7ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:15:23 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/database_names.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/assets/scaffolds.self-994b83d8af8c729f12c568e2e64cb31cb592314f5ad381758530574de0ab73ff.css?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/assets/species.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/assets/database_names.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/assets/species.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-16 15:15:23 -0700
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:15:26 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 30ms (Views: 28.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/1/edit" for ::1 at 2015-10-16 15:15:28 -0700
+Processing by SpeciesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.1ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered species/_form.html.erb (1.4ms)
+  Rendered species/edit.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 31ms (Views: 30.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:15:30 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpecies Load (0.1ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:15:32 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 35ms (Views: 34.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:15:34 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (1.0ms)
+  Rendered species/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 30ms (Views: 29.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/species/sightings" for ::1 at 2015-10-16 15:15:42 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"sightings"}
+  [1m[35mSpecies Load (0.1ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Species with 'id'=sightings):
+  app/controllers/species_controller.rb:67:in `set_species'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.0ms)
+
+
+Started GET "/species/sightings" for ::1 at 2015-10-16 15:19:50 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"sightings"}
+  [1m[36mSpecies Load (0.1ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Species with 'id'=sightings):
+  app/controllers/species_controller.rb:67:in `set_species'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.9ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.5ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.3ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:19:55 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.3ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 153ms (Views: 152.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/database_names.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/assets/species.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/assets/scaffolds.self-994b83d8af8c729f12c568e2e64cb31cb592314f5ad381758530574de0ab73ff.css?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/assets/database_names.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/assets/species.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-16 15:19:55 -0700
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:19:59 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.1ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 1777ms (Views: 1775.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:20:01 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 32.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:20:03 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:21:37 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 58ms (Views: 32.5ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/scaffolds.self-994b83d8af8c729f12c568e2e64cb31cb592314f5ad381758530574de0ab73ff.css?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/assets/species.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/assets/database_names.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/assets/species.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/assets/database_names.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-16 15:21:37 -0700
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:21:39 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 32ms (Views: 28.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/1/edit" for ::1 at 2015-10-16 15:21:40 -0700
+Processing by SpeciesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpecies Load (0.1ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered species/_form.html.erb (1.4ms)
+  Rendered species/edit.html.erb within layouts/application (48.3ms)
+Completed 200 OK in 78ms (Views: 76.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:21:43 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.5ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 39ms (Views: 36.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:21:44 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (1.0ms)
+  Rendered species/new.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 32ms (Views: 31.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 15:21:46 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kjV8gPl5gfTsHPcx/rE0OARVAEpv0QnygdCKTbKShRF/4c7p81jhiS1BO6D6aMR0MCnphrTNaXpjLYn0NG3ATw==", "species"=>{"name"=>""}, "commit"=>"Create Species"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", ""], ["created_at", "2015-10-16 22:21:46.733635"], ["updated_at", "2015-10-16 22:21:46.733635"]]
+  [1m[35m (61.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/species/5
+Completed 302 Found in 64ms (ActiveRecord: 61.5ms)
+
+
+Started GET "/species/5" for ::1 at 2015-10-16 15:21:46 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSpecies Load (0.1ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  Rendered species/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:21:50 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 30ms (Views: 29.2ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/species/5" for ::1 at 2015-10-16 15:21:57 -0700
+Processing by SpeciesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"7pxIDkwMczTS+OcqFzlkOVWxtC99ael1qJ7t3hq2eRcDSPpnRi0TSROlK7sT4JR1Yc1d46Z1if1KY+5nnEk8SQ==", "id"=>"5"}
+  [1m[36mSpecies Load (0.1ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "species" WHERE "species"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/species
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:21:57 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.3ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 50ms (Views: 48.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:24:01 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (1.5ms)
+  Rendered species/new.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 45ms (Views: 38.5ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 15:24:02 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4zFWg7b9afoNJXXMRQ2okIwYXu9i0cRmfMbTlUYDqr4O5eTqvNwJh8x4uV1B1FjcuGS3I7nNpO6eO9AswPzv4A==", "species"=>{"name"=>""}, "commit"=>"Create Species"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered species/_form.html.erb (3.7ms)
+  Rendered species/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 41ms (Views: 37.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:24:10 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 32ms (Views: 31.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:25:20 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 38ms (Views: 34.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/database_names.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/assets/scaffolds.self-994b83d8af8c729f12c568e2e64cb31cb592314f5ad381758530574de0ab73ff.css?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/assets/species.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/assets/database_names.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/assets/species.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2015-10-16 15:25:20 -0700
+
+
+Started GET "/sightings" for ::1 at 2015-10-16 15:25:55 -0700
+
+ActionController::RoutingError (uninitialized constant SightingsController):
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `const_get'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:261:in `block in constantize'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `each'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `inject'
+  activesupport (4.2.4) lib/active_support/inflector/methods.rb:259:in `constantize'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:72:in `controller_reference'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:62:in `controller'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:41:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.4) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.4) lib/action_dispatch/routing/route_set.rb:821:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.4) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.4) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.4) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (64.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.5ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (80.5ms)
+  [1m[36m (18.3ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.3ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSpecies (20151016212104)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (18.6ms)[0m  [1mCREATE TABLE "species" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151016212104"]]
+  [1m[36m (16.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'species'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36m (112.1ms)[0m  [1mDROP DATABASE IF EXISTS "speciestracker_test"[0m
+  [1m[35m (338.6ms)[0m  CREATE DATABASE "speciestracker_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.8ms)[0m  CREATE TABLE "species" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151016212104')
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:43:57 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.7ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.5ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (98.4ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:44:34 -0700
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.7ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (80.2ms)
+  [1m[36m (136.9ms)[0m  [1mDROP DATABASE IF EXISTS "speciestracker_test"[0m
+  [1m[35m (569.7ms)[0m  CREATE DATABASE "speciestracker_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.0ms)[0m  CREATE TABLE "species" ("id" serial primary key, "name" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.4ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151016212104')
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:45:07 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.1ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.6ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (86.5ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:45:09 -0700
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+	bin/rake db:migrate RAILS_ENV=development
+
+):
+  activerecord (4.2.4) lib/active_record/migration.rb:392:in `check_pending!'
+  activerecord (4.2.4) lib/active_record/migration.rb:373:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.4) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.4) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/learn01/.rvm/rubies/ruby-2.2.2/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.9ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.0ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSightings (20151016224026)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (25.2ms)[0m  [1mCREATE TABLE "sightings" ("id" serial primary key, "date" character varying, "long" character varying, "lat" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20151016224026"]]
+  [1m[36m (16.1ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (2.0ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'sightings'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[35m (1.5ms)[0m  SELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'species'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+
+
+
+Started GET "/species/5" for ::1 at 2015-10-16 15:45:42 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSpecies Load (0.4ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 5]]
+Completed 404 Not Found in 68ms (ActiveRecord: 2.4ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Species with 'id'=5):
+  app/controllers/species_controller.rb:67:in `set_species'
+
+
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.7ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.9ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.2ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/learn01/.rvm/gems/ruby-2.2.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (81.8ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:45:52 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.4ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 516ms (Views: 515.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sightings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-10-16 15:45:52 -0700
+
+
+Started GET "/assets/sightings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-10-16 15:45:52 -0700
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:45:55 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (68.2ms)
+  Rendered species/new.html.erb within layouts/application (70.2ms)
+Completed 200 OK in 178ms (Views: 174.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/species" for ::1 at 2015-10-16 15:46:00 -0700
+Processing by SpeciesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/dD3Zy5Ru40LCezFRCTX7YO6ScZWequN+tqdjsyoM04QBEUOJHDb8MpUIFRA/Seht8agCo1mywUYJ543Sld2EA==", "species"=>{"name"=>"zebra"}, "commit"=>"Create Species"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "species" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "zebra"], ["created_at", "2015-10-16 22:46:00.270484"], ["updated_at", "2015-10-16 22:46:00.270484"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://localhost:3000/species/1
+Completed 302 Found in 8ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:46:00 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.3ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 58ms (Views: 56.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:46:02 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.4ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 39ms (Views: 38.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/species/new" for ::1 at 2015-10-16 15:46:05 -0700
+Processing by SpeciesController#new as HTML
+  Rendered species/_form.html.erb (6.6ms)
+  Rendered species/new.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 43ms (Views: 42.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:46:07 -0700
+Processing by SpeciesController#index as HTML
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT "species".* FROM "species"[0m
+  Rendered species/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 33ms (Views: 32.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/1/edit" for ::1 at 2015-10-16 15:46:09 -0700
+Processing by SpeciesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered species/_form.html.erb (1.1ms)
+  Rendered species/edit.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/species/1" for ::1 at 2015-10-16 15:46:10 -0700
+Processing by SpeciesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSpecies Load (0.2ms)[0m  [1mSELECT  "species".* FROM "species" WHERE "species"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered species/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 35.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/species" for ::1 at 2015-10-16 15:47:15 -0700
+Processing by SpeciesController#index as HTML
+  [1m[35mSpecies Load (0.2ms)[0m  SELECT "species".* FROM "species"
+  Rendered species/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sightings" for ::1 at 2015-10-16 15:47:18 -0700
+Processing by SightingsController#index as HTML
+  [1m[36mSighting Load (0.4ms)[0m  [1mSELECT "sightings".* FROM "sightings"[0m
+  Rendered sightings/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 67ms (Views: 47.9ms | ActiveRecord: 0.9ms)

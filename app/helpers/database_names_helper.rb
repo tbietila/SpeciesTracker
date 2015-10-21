@@ -1,0 +1,2 @@
+module DatabaseNamesHelper
+end
